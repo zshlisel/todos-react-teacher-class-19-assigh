@@ -44,7 +44,7 @@ export default function Todos({ userId }) {
           {tasks
             .filter((task) => !task.done)
             .map((task) => (
-              <Task task={task} key={task.id} />
+              <Task task={task} updateTasks={loadTasks} key={task.id} />
             ))}
         </section>
         <section className="task-list completed" id="done-list">
@@ -52,7 +52,7 @@ export default function Todos({ userId }) {
           {tasks
             .filter((task) => task.done)
             .map((task) => (
-              <Task task={task} key={task.id} />
+              <Task task={task} updateTasks={loadTasks} key={task.id} />
             ))}
         </section>
       </div>

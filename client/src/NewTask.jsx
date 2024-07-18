@@ -16,7 +16,7 @@ export default function NewTask({ updateTasks }) {
         user_id: userId,
       }),
     });
-    updateTasks();
+    updateTasks(); // this will rerender the tasks with the new one
     event.target.elements.title.value = "";
   }
   return (
